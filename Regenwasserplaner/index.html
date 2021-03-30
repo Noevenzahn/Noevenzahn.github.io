@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Regenwasserplaner</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/olq6lfv.css">
+</head>
+
+<body>
+  <form class="abwasserrechner">
+    <div class="all-inputs">
+      <div class="input-group">
+        <p class="input-description">Personenzahl</p>
+        <div class="button-group">
+          <button id="one-person" class="1 image-container-grey" aria-label="eine Person"></button>
+          <button id="two-persons" class="2 image-container-grey clicked" aria-label="zwei Personen"></button>
+          <button id="three-persons" class="3 image-container-grey" aria-label="drei Personen"></button>
+          <button id="four-persons" class="4 image-container-grey" aria-label="vier Personen"></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <p class="input-description">Nutzbereiche</p>
+        <div class="button-group nutzbereiche">
+          <button class="image-container-grey3 toi" aria-label="Toilette"><img src="./images/Toilette.svg" alt=""></button>
+          <button class="image-container-grey3 was" aria-label="Waschmaschine"><img src="./images/Waschmaschine.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="number-input-group">
+          <input id="auffangflaeche" class="number-input" type="number" name="nutztage" placeholder="Dachfläche..." pattern="[0-9]*" inputmode="numeric" value="" min="0" autocomplete="off">
+          <span class="fläche">m<sup>2</sup></span>
+        </div>
+        <select id="dachart" class="dachartselect">
+          <option value="1">Glasierte Ziegel</option>
+          <option value="1">Gebrannte Ziegel</option>
+          <option value="1">Schieferdach</option>
+          <option value="0.5">Gr&uuml;ndach</option>
+          <option value="0.5">Flachdach mit Kiessch&uuml;ttung</option>
+          <option value="1">Flachdach mit Beton</option>
+        </select>
+        <div class="number-input-group">
+          <input id="bewflaeche" class="number-input" type="number" name="nutztage" placeholder="Gartenfläche..." pattern="[0-9]*" inputmode="numeric" value="" min="0" autocomplete="off">
+          <span class="fläche">m<sup>2</sup></span>
+        </div>
+        <div class="plz">
+          <span id="plz-text">PLZ:</span>
+          <input id="plz-input" class="number-input" type="number" name="nutztage" pattern="[0-9]*" inputmode="numeric" value="23966" min="0" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div class="picture-box"><a href="#" class="tankbutton"><img id="tankimg" src="" alt=""></a></div>
+      <button id="result-button" type="button" name="button"> <a class="tankbutton" href="#"><span id="tankname">Gartenanlage – 4700 Liter</span></a></button>
+    </div>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>

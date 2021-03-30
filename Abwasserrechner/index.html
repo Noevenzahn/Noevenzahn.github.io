@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Abwasserrechner</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/olq6lfv.css">
+</head>
+
+<body>
+  <form class="abwasserrechner">
+    <div class="all-inputs">
+      <div class="input-group">
+        <p class="input-description">Personenzahl</p>
+        <div class="button-group">
+          <button id="one-person" class="1 image-container-grey" aria-label="eine Person"></button>
+          <button id="two-persons" class="2 image-container-grey clicked" aria-label="zwei Personen"></button>
+          <button id="three-persons" class="3 image-container-grey" aria-label="drei Personen"></button>
+          <button id="four-persons" class="4 image-container-grey" aria-label="vier Personen"></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <p class="input-description">Entleerung pro Jahr</p>
+        <div class="button-group">
+          <button class="1 image-container-grey2 clicked"><span class="entleerungen">1</span></button>
+          <button class="2 image-container-grey2"><span class="entleerungen">2</span></button>
+          <button class="3 image-container-grey2"><span class="entleerungen">3</span></button>
+          <button class="4 image-container-grey2"><span class="entleerungen">4</span></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <p class="input-description">Nutzbereiche</p>
+        <div class="button-group nutzbereiche">
+          <button class="image-container-grey3 kue" aria-label="Küche"><img src="./images/Küche.svg" alt=""></button>
+          <button class="image-container-grey3 toi clicked" aria-label="Toilette"><img src="./images/Toilette.svg" alt=""></button>
+          <button class="image-container-grey3 dus" aria-label="Dusche"><img src="./images/Badewanne.svg" alt=""></button>
+          <button class="image-container-grey3 was clicked" aria-label="Waschmaschine"><img src="./images/Waschmaschine.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="number-input" class="input-description">Nutztage pro Jahr</label>
+        <input id="number-input" type="number" name="nutztage" pattern="[0-9]*" inputmode="numeric" value="30" min="0" max="365" autocomplete="off">
+      </div>
+    </div>
+    <div class="result">
+      <div class="picture-box"><a href="#" class="tankbutton"><img id="tankimg" src="./images/Abwassertank-system-6000-Liter-DN200_200x200@2x.png" alt=""></a></div>
+      <button id="result-button" type="button" name="button"> <a class="tankbutton" href="#"><span id="tankname">Abwassertank-System</span></a></button>
+    </div>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>
