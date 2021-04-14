@@ -106,7 +106,7 @@
 }
 #result-button {
   padding: 9px 30px;
-  margin: 30px 10px 30px 10px;
+  margin: 30px 10px 10px 10px;
   border: none;
   border-radius: 100px;
   background-color: var(--blue);
@@ -117,6 +117,10 @@
 }
 #result-button a {
   text-decoration: none;
+}
+#preis-anzeige {
+color: grey;
+font-size: 16px;
 }
 
 

@@ -167,6 +167,6 @@ function calculate() {
   $('#tankname').attr("href", link);
   $('.tankbutton').attr("href", link);
   $('#tankimg').attr("src", img);
-  $('#tankpreis').html(preis);
+  $('#preis-anzeige').html(preis);
   return false;
 }
