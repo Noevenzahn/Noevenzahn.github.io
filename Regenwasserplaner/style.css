@@ -131,6 +131,9 @@ input[type=number] {
   border: none;
   box-sizing: border-box;
 }
+#dachart option {
+  font-size: 20px;
+}
 
 .fläche {
   font-size: 25px;
