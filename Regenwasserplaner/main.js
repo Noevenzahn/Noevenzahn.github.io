@@ -515,17 +515,19 @@ function calculate() {
     '<p style="margin-left:20px;margin-top: 50px;"><a class="tanklink" href="#" style="text-decoration:none;"><img id="tankimg" src="#" style="float: right;border-radius: 14px;margin-right: 10px;border: 5px solid #ffffff;margin-top: -25px;display:none;"></a><a class="tanklink" href="#" style="text-decoration:none;"><span id="tankname" style="display:none;"></span></a></p>');
 
 
-
-
   $('.tankbutton').attr("href", link);
   $('#tankimg').attr("src", img);
-  $('#tankpreis').html(preis);
+
+  $('#preis-anzeige').html(`Ab ${preis}`);
+  $('#ertrag').html(`Regenwasserertrag im Jahr: ${regenwasserertrag.toFixed(2)} m³`);
+  $('#verbrauch').html(`Regenwasserverbrauch im Jahr: ${wasserverbrauch.toFixed(2)} m³`);
+  $('#speichergröße').html(`Empfohlene Speichergröße: ${speichergroße} Liter`);
 
   $("#showresult").slideDown("slow").delay(200);
   $("#tankimg").slideDown("slow").delay(200);
   $("#tankname").slideDown("slow").delay(400);
   $('#tankname').html(name).delay(400);
-  $('#tankname').attr("href", link);
+  // $('#preis-anzeige').attr("href", link);
 
   return false;
 }
